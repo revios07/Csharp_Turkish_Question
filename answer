@@ -1,0 +1,58 @@
+using System;
+
+namespace ConsoleApp10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //Switch case yapısını kullanarak kullanıcıdan haftanın kaçıncı günü olduğu bilgisini alınız ardından bu güne göre durumunu ğreniniz?
+            
+            bool quit = true;
+
+            do
+            {
+                Console.Write("Haftanın kaçıncı gününün hava durumunu öğrenmek istersiniz? :)) = ");
+                int day = Convert.ToInt32(Console.ReadLine());
+
+                switch (day)
+                {
+                    case 1:
+                        Console.WriteLine("Pazartesi Yağmurlu");
+                        break;
+                    case 2:
+                        Console.WriteLine("Salı Sallanır :)");
+                        break;
+                    case 3:
+                        Console.WriteLine("Çarşamba Çarşafa dolanır :)");
+                        break;
+                    case 4:
+                        Console.WriteLine("Perşembe Günlere Şebeke");
+                        break;
+                    case 5:
+                        Console.WriteLine("Cuma Cumlanır xdd");
+                        break;
+                    case 6:
+                        Console.WriteLine("Cumartesi Hava missss");
+                        break;
+                    case 7:
+                        Console.WriteLine("Pazar Misin Oğluuu");
+                        break;
+                    default:
+                        Console.WriteLine("HAFTA 7 GÜNDÜR KNK !!! :dD");
+                        break;                        
+                }
+                Console.Write("Çıkmak için quit yazınız");
+                string exit = Console.ReadLine();
+               
+                if (exit == "quit")
+                    {
+                        quit = false;
+                    }
+
+            } while (quit == true);
+
+        }
+    }
+}
